@@ -1,0 +1,9 @@
+{ "list":
+	[
+		{"name": "Simone", "location": "Basel"},
+		{"name": "Andreas", "location": "Lupsingen"},
+		{"name": "Kurt", "location": "Bubendorf"},
+		{"name": "Dominik", "location": "Reinach"},
+		{"name": "Sämi", "location": "Basel"}
+	]
+}

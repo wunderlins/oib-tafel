@@ -1,20 +1,13 @@
 'use strict';
 
 angular.module('oibTafelApp')
-	.factory("oibTafelAppFactory", function() {
-	var factory = {};
-	var patienten = [
-		{name: "Simone", location: "Basel"},
-		{name: "Andreas", location: "Lupsingen"},
-		{name: "Sämi", location: "Basel"}
-	];
-	
-	factory.getPatienten = function() {
-		return patienten;
+	.factory("oibTafelAppFactory", ['$http', function($http) {
+	return {
+		list: function(callback){
+			$http.get('data/patienten.json').success(callback);
+		}
 	};
-	
-	return factory;
-});
+}]);
 
 
 /**
@@ -37,7 +30,11 @@ angular.module('oibTafelApp')
     // - PEP
     // - mdsi
     // - tafelDB (a table currently stored in mdsi)
-    $scope.patienten = oibTafelAppFactory.getPatienten();
-    console.log($scope.patienten);
-    
+    //$scope.patienten = oibTafelAppFactory.getPatienten();
+    //console.log($scope.patienten);
+
+		oibTafelAppFactory.list(function(oibTafelAppFactory) {
+			$scope.patienten = oibTafelAppFactory.list;
+		});
+		
   });
