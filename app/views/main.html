@@ -1,2 +1,12 @@
-<p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div ng-controller="MainCtrl">
 
+	<!--p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p-->
+
+	Liste:
+	<ul>
+		<li ng-repeat="pat in patienten">
+			{{pat.name}} 
+		</li>
+	</ul>
+	
+</div>

@@ -3,14 +3,14 @@
 angular.module('oibTafelApp')
 	.factory("oibTafelAppFactory", function() {
 	var factory = {};
-	var items = [
+	var patienten = [
 		{name: "Simone", location: "Basel"},
 		{name: "Andreas", location: "Lupsingen"},
 		{name: "Sämi", location: "Basel"}
 	];
 	
-	factory.getItems = function() {
-		return items;
+	factory.getPatienten = function() {
+		return patienten;
 	};
 	
 	return factory;
@@ -37,7 +37,7 @@ angular.module('oibTafelApp')
     // - PEP
     // - mdsi
     // - tafelDB (a table currently stored in mdsi)
-    $scope.items = oibTafelAppFactory.getItems();
-    
+    $scope.patienten = oibTafelAppFactory.getPatienten();
+    console.log($scope.patienten);
     
   });
