@@ -29,6 +29,7 @@ Then get the minimal required node modules to get us started with the project:
 Install the unit testing module jasmine
 
     npm install karma-jasmine karma-chrome-launcher --save-dev
+    export PATH=node_modules/.bin/:$PATH
     
 Create an empty project
 
