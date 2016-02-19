@@ -40,6 +40,7 @@ meta = {
 urls = (
   '/mitarbeiter.json', 'webctx.mitarbeiter',
   '/schichtpersonal.json', 'webctx.schichtpersonal',
+  '/patienten.json', 'webctx.patienten',
   #'/env', 'webctx.env',
   #'/json1', 'webctx.json1',
   #'/json2', 'webctx.json2',

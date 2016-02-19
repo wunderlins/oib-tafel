@@ -183,7 +183,11 @@ class login(webctx):
 		return '{"success": false}'
 
 #### example methods ###########################################################
-
+"""
+srsqlln01.uhbs.ch
+mdsic/mdsic
+mdsi
+"""
 
 class schichtpersonal(webctx):
 	""" Serve Personalschichten from MDSi
@@ -233,8 +237,24 @@ class patienten(webctx):
 		SELECT *  FROM mdsi.dat_patfall  WHERE LOCT_01 = 'J'  ORDER BY PD_Bett
 	"""
 	def GET(self):
+		
+		import MySQLdb as mdb
+		import MySQLdb.cursors
+		con = mdb.connect('srsqlln01.uhbs.ch', 'mdsic', 'mdsic', 'mdsi', charset = 'utf8', cursorclass=MySQLdb.cursors.DictCursor);
+		cur = con.cursor()
+		# FIXME: replace * with appropriate field names
+		result = cur.execute("SELECT * FROM mdsi.dat_patfall WHERE LOCT_01 = 'J' ORDER BY PD_Bett")
+		
+		res = []
+		for i in range(cur.rowcount):
+			r = cur.fetchone()
+			#print r
+			res.append(r)
+		
+		con.close()
+		
 		web.header('Content-Type', 'application/json')
-		return '{"list": {}}'
+		return json.dumps(res) # '{"list": {}}'
 
 #### example methods ###########################################################
 '''
