@@ -39,6 +39,7 @@ meta = {
 # url to class mapping
 urls = (
   '/mitarbeiter.json', 'webctx.mitarbeiter',
+  '/schichtpersonal.json', 'webctx.schichtpersonal',
   #'/env', 'webctx.env',
   #'/json1', 'webctx.json1',
   #'/json2', 'webctx.json2',

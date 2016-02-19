@@ -184,8 +184,54 @@ class login(webctx):
 
 #### example methods ###########################################################
 
+
+class schichtpersonal(webctx):
+	""" Serve Personalschichten from MDSi
+		mysql query:
+		JMT = "20060101"
+		SELECT *  FROM mdsi.dat_schichtpersonal WHERE JMT="+JMT
+	"""
+	def GET(self):
+		web.header('Content-Type', 'application/json')
+		return '{"list": {}}'
+
+
 class mitarbeiter(webctx):
-	""" Serve Mitarbeiter from PEP"""
+	""" Serve Mitarbeiter from PEP
+	
+  SQL =      "SELECT PL.DATUM, PL.KNOTEN_ID, PL.PA_CODE, MA.KUERZEL, MA.NACHNAME, MA.VORNAME"
+  SQL = SQL +"FROM ECBERN.DIENST D, ECBERN.MITARBEITER MA, ECBERN.PLANUNG PL "
+  SQL = SQL +"FROM ECBERN.MITARBEITER MA, ECBERN.PLANUNG PL "
+  SQL = SQL +"WHERE (MA.ID = PL.MITARBEITER_ID) "
+  'SQL = SQL +"AND D.PA_CODE = PL.PA_CODE "
+  'SQL = SQL +"AND (PL.KNOTEN_ID=14411 "
+  'SQL = SQL +"OR   PL.KNOTEN_ID=14412 "
+  'SQL = SQL +"OR   PL.KNOTEN_ID=14413 "
+  'SQL = SQL +"OR   PL.KNOTEN_ID=14414 "
+  'SQL = SQL +"OR   PL.KNOTEN_ID=14415 "
+  'SQL = SQL +"OR   PL.KNOTEN_ID=16805 "
+  'SQL = SQL +"OR   PL.KNOTEN_ID=18019 "
+  'SQL = SQL +"OR   PL.KNOTEN_ID=18062) "
+  
+  SQL = SQL +"AND (PL.KNOTEN_ID=99999 "
+  SQL = SQL +"OR   PL.KNOTEN_ID=18019 "
+  SQL = SQL +"OR   PL.KNOTEN_ID=18062 "
+  SQL = SQL +"OR   PL.KNOTEN_ID=16805 "
+  SQL = SQL +"OR   PL.KNOTEN_ID=14415 "
+  SQL = SQL +"OR   PL.KNOTEN_ID=14411 "
+  SQL = SQL +"OR   PL.KNOTEN_ID=14412 "
+  SQL = SQL +"OR   PL.KNOTEN_ID=14413) "
+	
+	"""
+	def GET(self):
+		web.header('Content-Type', 'application/json')
+		return '{"list": {}}'
+
+class patienten(webctx):
+	""" Serve patienten from MDSi
+		mysql query:
+		SELECT *  FROM mdsi.dat_patfall  WHERE LOCT_01 = 'J'  ORDER BY PD_Bett
+	"""
 	def GET(self):
 		web.header('Content-Type', 'application/json')
 		return '{"list": {}}'
