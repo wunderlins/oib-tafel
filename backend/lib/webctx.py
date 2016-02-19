@@ -196,8 +196,24 @@ class schichtpersonal(webctx):
 		SELECT *  FROM mdsi.dat_schichtpersonal WHERE JMT="+JMT
 	"""
 	def GET(self):
+		
+		import MySQLdb as mdb
+		import MySQLdb.cursors
+		con = mdb.connect('srsqlln01.uhbs.ch', 'mdsic', 'mdsic', 'mdsi', charset = 'utf8', cursorclass=MySQLdb.cursors.DictCursor);
+		cur = con.cursor()
+		# FIXME: replace * with appropriate field names
+		result = cur.execute("SELECT *  FROM mdsi.dat_schichtpersonal WHERE JMT='20060101'")
+		
+		res = []
+		for i in range(cur.rowcount):
+			r = cur.fetchone()
+			#print r
+			res.append(r)
+		
+		con.close()
+		
 		web.header('Content-Type', 'application/json')
-		return '{"list": {}}'
+		return json.dumps(res) # '{"list": {}}'
 
 
 class mitarbeiter(webctx):
