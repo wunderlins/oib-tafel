@@ -1,0 +1,190 @@
+Thu 07.01.2016 22:32  Samuel Pulfer <samuel.pulfer@usb.ch>
+
+  * httpd.py, lib/usbauth.py, lib/webctx.py, template/authxmpl.html,
+  template/index.html: authorisation example added
+
+Thu 07.01.2016 10:10  wunderlins <simon.wunderlin@usb.ch>
+
+  * bin/clean.sh, bin/setup.sh, bin/start.sh, bin/stop.sh, etc/config.py,
+  lib/setenv.sh, lib/web, lib/wsgilog: fixed setup routine
+
+Mon 02.11.2015 08:30  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * .gitignore, bin/changelog.py: added changelog script
+
+Mon 02.11.2015 07:50  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * bin/restart.sh, bin/start.sh, etc/config.py: fixed bug with paths
+
+Mon 02.11.2015 07:44  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * README.md, bin/.gitignore, bin/setup.sh, bin/setuser.py, bin/start.sh,
+  bin/status.sh, bin/stop.sh, etc/.gitignore, etc/config.py, etc/user.sql,
+  lib/realpath.c, lib/setenv.sh: added setenv and more robust start/stop
+  environment
+
+Sat 31.10.2015 23:42  wus <swunderlin@gmail.com>
+
+  * bin/setuser.py, etc/.gitignore, etc/config.py, etc/user.db, static/ext:
+  added user mgmnt script
+
+Sat 31.10.2015 23:37  wus <swunderlin@gmail.com>
+
+  * bin/clean.sh, bin/setup.sh, etc/config.py, etc/user.db, httpd.py,
+  static/.gitignore, var/.gitignore: tigthened security
+
+Sat 31.10.2015 22:01  wus <swunderlin@gmail.com>
+
+  * bin/clean.sh, bin/genuuid.py, bin/setup.sh, bin/start.sh, bin/stop.sh,
+  etc/config.py, httpd.py: moved meta data to config file. added interactive
+  setup script. ne cleanup script for testing setup mechanism. genuuid is a
+  minimal python script to create a GIUD
+
+Thu 22.10.2015 13:31  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * etc/config.py, static/css/login.css, static/js/login.js,
+  template/login.html: cosmetics
+
+Wed 21.10.2015 22:11  Samuel Pulfer <samuelpulfer@gmail.com>
+
+  * bin/setup.sh, lib/bootstrap-3.3.5-dist.zip, static/.gitignore,
+  static/bootstrap/3.3.5/css/bootstrap-theme.css,
+  static/bootstrap/3.3.5/css/bootstrap-theme.css.map,
+  static/bootstrap/3.3.5/css/bootstrap-theme.min.css,
+  static/bootstrap/3.3.5/css/bootstrap.css,
+  static/bootstrap/3.3.5/css/bootstrap.css.map,
+  static/bootstrap/3.3.5/css/bootstrap.min.css,
+  .../3.3.5/fonts/glyphicons-halflings-regular.eot,
+  .../3.3.5/fonts/glyphicons-halflings-regular.svg,
+  .../3.3.5/fonts/glyphicons-halflings-regular.ttf,
+  .../3.3.5/fonts/glyphicons-halflings-regular.woff,
+  .../3.3.5/fonts/glyphicons-halflings-regular.woff2,
+  static/bootstrap/3.3.5/js/bootstrap.js,
+  static/bootstrap/3.3.5/js/bootstrap.min.js, static/bootstrap/3.3.5/js/npm.js,
+  template/bootstrap.html, template/login.html: bootstrap nun als .zip welches
+  mit setup.sh entpackt wird.
+
+Tue 20.10.2015 23:57  Samuel Pulfer <samuelpulfer@gmail.com>
+
+  * lib/webctx.py, static/css/login.css, template/login.html: Login Seite
+  Bootstrapifiziert.
+
+Tue 20.10.2015 22:54  Samuel Pulfer <samuelpulfer@gmail.com>
+
+  * httpd.py, lib/webctx.py, static/bootstrap/3.3.5/css/bootstrap-theme.css,
+  static/bootstrap/3.3.5/css/bootstrap-theme.css.map,
+  static/bootstrap/3.3.5/css/bootstrap-theme.min.css,
+  static/bootstrap/3.3.5/css/bootstrap.css,
+  static/bootstrap/3.3.5/css/bootstrap.css.map,
+  static/bootstrap/3.3.5/css/bootstrap.min.css,
+  .../3.3.5/fonts/glyphicons-halflings-regular.eot,
+  .../3.3.5/fonts/glyphicons-halflings-regular.svg,
+  .../3.3.5/fonts/glyphicons-halflings-regular.ttf,
+  .../3.3.5/fonts/glyphicons-halflings-regular.woff,
+  .../3.3.5/fonts/glyphicons-halflings-regular.woff2,
+  static/bootstrap/3.3.5/js/bootstrap.js,
+  static/bootstrap/3.3.5/js/bootstrap.min.js, static/bootstrap/3.3.5/js/npm.js,
+  static/css/bootstraptheme.css, template/bootstrap.html, template/index.html:
+  bootstrap integriert.
+
+Tue 20.10.2015 22:17  Samuel Pulfer <samuelpulfer@gmail.com>
+
+  * static/css/json1.css, static/css/json2.css, static/jquery-2.1.3.js,
+  static/jquery-2.1.3.min.js, static/js/.gitignore, static/js/json1.js,
+  static/js/json2.js, static/js/login.js, template/json1.html,
+  template/json2.html, template/login.html: Grosse Aufraeumaktion. css und js
+  aus html entfernt und unter static in entsprechende Ordner geworfen.
+
+Mon 13.07.2015 19:25  wus <swunderlin@gmail.com>
+
+  * etc/config.py, httpd.py, lib/webctx.py, template/error.html,
+  test/status.py: fixed auth_check
+
+Fri 10.07.2015 14:30  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * httpd.py, lib/webctx.py: fixed session
+
+Fri 10.07.2015 14:24  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * httpd.py, lib/webctx.py: moved
+
+Wed 03.06.2015 11:32  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * httpd.py, lib/usbauth.py: cleanup
+
+Wed 03.06.2015 10:42  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * httpd.py, lib/usbauth.py, template/login.html: added ad authentication
+
+Wed 03.06.2015 09:46  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * create_userdb.py, etc/user.db, httpd.py: implemented basic sqlite db aout
+
+Wed 03.06.2015 08:39  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * create_userdb.py, etc/user.db, etc/user.sql, httpd.py, lib/auth.py,
+  lib/usbauth.py, template/login.html: added simple login form, mechanism, user
+  database, needs user authentication adn then the login is done
+
+Tue 02.06.2015 10:28  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * httpd.py, lib/auth.py: added auth lib
+
+Tue 10.03.2015 23:00  Samuel Pulfer <samuelpulfer@gmail.com>
+
+  * httpd.py, template/index.html, template/json.html, template/json1.html,
+  template/json2.html: Add json example without JQuery. Fix httpd.py (class
+  json overrides json include)
+
+Mon 16.02.2015 13:51  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * httpd.py, static/py.png: added image example
+
+Fri 13.02.2015 17:20  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * template/env.html, var/.gitignore: bug fixes
+
+Fri 13.02.2015 11:41  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * httpd.py, static/jquery-2.1.3.js, static/jquery-2.1.3.min.js,
+  template/json.html: added jquery, libs
+
+Fri 13.02.2015 10:15  Simon Wunderlin <simon.wunderlin@usb.ch>
+
+  * bin/setup.sh, lib/.gitignore, lib/wsgilog, lib/wsgilog-0.3.tar.bz2: added
+  wsgilog lib
+
+Fri 13.02.2015 00:50  wus <swunderlin@gmail.com>
+
+  * httpd.py, template/json.html: first working server client example
+
+Fri 13.02.2015 00:16  wus <swunderlin@gmail.com>
+
+  * httpd.py, static/.gitignore, template/index.html, template/json.html: added
+  client side example
+
+Thu 12.02.2015 23:09  wus <swunderlin@gmail.com>
+
+  * etc/config.py, httpd.py, template/env.html: moved all session config to
+  etc/config.py
+
+Thu 12.02.2015 22:48  wus <swunderlin@gmail.com>
+
+  * etc/config.pyc, httpd.pyc: removed
+
+Thu 12.02.2015 22:45  wus <swunderlin@gmail.com>
+
+  * bin/restart.sh, bin/setup.sh, bin/start.sh, bin/stop.sh, etc/config.py,
+  etc/config.pyc, etc/httpd.cfg, httpd.py, httpd.pyc, lib/web,
+  template/env.html, template/index.html, var/.gitignore: implemented basic
+  framework
+
+Thu 12.02.2015 21:29  wus <swunderlin@gmail.com>
+
+  * .gitignore, lib/.gitignore, lib/web.py-0.37.tar.gz: added webpy
+
+Thu 12.02.2015 21:25  wus <swunderlin@gmail.com>
+
+  * .gitignore, bin/.gitignore, etc/.gitignore, etc/httpd.cfg, httpd.py,
+  lib/.gitignore, static/.gitignore, template/.gitignore, var/.gitignore: added
+  skeleton
