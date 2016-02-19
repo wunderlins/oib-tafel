@@ -38,14 +38,14 @@ meta = {
 
 # url to class mapping
 urls = (
-  '/', 'webctx.index',
-  '/env', 'webctx.env',
-  '/json1', 'webctx.json1',
-  '/json2', 'webctx.json2',
-  '/image', 'webctx.image',
-  '/login', 'webctx.login',
-  '/bootstrap', 'webctx.bootstrap',
-  '/authorisation', 'webctx.authorisationxmpl'
+  '/mitarbeiter.json', 'webctx.mitarbeiter',
+  #'/env', 'webctx.env',
+  #'/json1', 'webctx.json1',
+  #'/json2', 'webctx.json2',
+  #'/image', 'webctx.image',
+  #'/login', 'webctx.login',
+  #'/bootstrap', 'webctx.bootstrap',
+  #'/authorisation', 'webctx.authorisationxmpl'
 )
 
 # default session values

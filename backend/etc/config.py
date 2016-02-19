@@ -5,11 +5,11 @@
 #
 
 # application information
-meta_name="webpy"
-meta_version="0.0.3"
+meta_name="oib-tafel"
+meta_version="0.0.1"
 
 # webserver port
-port=8090
+port=9090
 
 # log files
 web_logfile="var/access.log"
@@ -17,7 +17,7 @@ app_logfile="var/application.log"
 sql_logfile="var/sql.log"
 
 # session defaults
-session_salt="dd1322b5-6967-46b7-aed1-17c56be977cb"
+session_salt="6ac0e40b-af3a-40d2-aa6c-c6ba08bf8a6c"
 session_timeout=86400 #24 * 60 * 60, # 24 hours   in seconds
 session_dir='var'
 session_dir_prefix="session_"

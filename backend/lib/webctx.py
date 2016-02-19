@@ -182,6 +182,16 @@ class login(webctx):
 		
 		return '{"success": false}'
 
+#### example methods ###########################################################
+
+class mitarbeiter(webctx):
+	""" Serve Mitarbeiter from PEP"""
+	def GET(self):
+		web.header('Content-Type', 'application/json')
+		return '{"list": {}}'
+
+#### example methods ###########################################################
+'''
 class index(webctx):
 	""" Serve index page """
 	def GET(self):
@@ -300,3 +310,4 @@ class authorisationxmpl(webctx):
 		render = web.template.render('template')
 		return render.authxmpl(message)
 		
+'''
