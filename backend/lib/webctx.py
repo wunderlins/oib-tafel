@@ -242,10 +242,67 @@ class mitarbeiter(webctx):
   SQL = SQL +"OR   PL.KNOTEN_ID=14412 "
   SQL = SQL +"OR   PL.KNOTEN_ID=14413) "
 	
+	dsn=PEPUSB;uid=buelow;pwd=buelow
+	oraktp.uhbs.ch/1524/KTP
 	"""
+
+	def rows_to_dict_list(self, cursor):
+		columns = [i[0] for i in cursor.description]
+		return [dict(zip(columns, row)) for row in cursor]
+		
 	def GET(self):
+		
+		import cx_Oracle, csv, sys 
+	
+		tns_str = cx_Oracle.makedsn("oraktp.uhbs.ch", 1524, "KTP")
+		"""
+		tns_str = "(DESCRIPTION = "+\
+			"(FAILOVER = ON)(LOAD_BALANCE = OFF)(ENABLE=BROKEN)(ADDRESS_LIST ="+\
+				"(ADDRESS = (PROTOCOL = TCP)(HOST = oraisop.uhbs.ch)(PORT = 1545))"+\
+				"(ADDRESS = (PROTOCOL = TCP)(HOST = oraisop2.uhbs.ch)(PORT = 1545)))"+\
+			"(CONNECT_DATA =(SERVICE_NAME = ISOP_PRI.WORLD)"+\
+			"(failover_mode=(type=select) (method=basic))))"
+		"""
+		con = cx_Oracle.connect('buelow', 'buelow', tns_str)
+		cursor = con.cursor()
+		
+		"""
+		try:
+			cursor.execute(sql)
+		except Exception, e:
+			print e
+			sys.exit(1)
+
+		with open("/home/tegris/export/op-ost.csv", "wb") as csv_file:
+				csv_writer = csv.writer(csv_file, delimiter=";", quotechar='"', quoting=csv.QUOTE_ALL)
+				#csv_writer.writerow([i[0] for i in cursor.description]) # write headers
+				#print cursor
+				csv_writer.writerows(cursor)
+		"""
+
+		sql = """SELECT /*PL.DATUM,*/ PL.KNOTEN_ID, PL.PA_CODE, MA.KUERZEL, MA.NACHNAME, MA.VORNAME
+		--		FROM ECBERN.DIENST D, ECBERN.MITARBEITER MA, ECBERN.PLANUNG PL 
+				FROM ECBERN.MITARBEITER MA, ECBERN.PLANUNG PL 
+				WHERE (MA.ID = PL.MITARBEITER_ID) 
+				AND (PL.KNOTEN_ID=99999 
+				OR   PL.KNOTEN_ID=18019 
+				OR   PL.KNOTEN_ID=18062 
+				OR   PL.KNOTEN_ID=16805 
+				OR   PL.KNOTEN_ID=14415 
+				OR   PL.KNOTEN_ID=14411 
+				OR   PL.KNOTEN_ID=14412 
+				OR   PL.KNOTEN_ID=14413)
+		AND (PL.DATUM=TO_DATE('2006-06-15', 'YYYY-MM-DD')) 
+		ORDER BY PL.PA_CODE,MA.VORNAME,MA.NACHNAME ASC""" 
+		
+		res = cursor.execute(sql)
+		"""
+		for row in cursor.fetchall():
+			print row
+		"""
 		web.header('Content-Type', 'application/json')
-		return '{"list": {}}'
+		#print 
+		return json.dumps(self.rows_to_dict_list(cursor))
 
 class patienten(webctx):
 	""" Serve patienten from MDSi
