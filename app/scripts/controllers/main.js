@@ -9,6 +9,15 @@ angular.module('oibTafelApp')
 	};
 }]);
 
+angular.module('oibTafelApp')
+	.factory("oibTafelAppFactoryBetten", ['$http', function($http) {
+	return {
+		list: function(callback){
+			$http.get('data/betten.json').success(callback);
+		}
+	};
+}]);
+
 
 /**
  * @ngdoc function
@@ -18,7 +27,7 @@ angular.module('oibTafelApp')
  * Controller of the oibTafelApp
  */
 angular.module('oibTafelApp')
-  .controller('MainCtrl', function ($scope, oibTafelAppFactory) {
+  .controller('MainCtrl', function ($scope, oibTafelAppFactory, oibTafelAppFactoryBetten) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -34,7 +43,13 @@ angular.module('oibTafelApp')
     //console.log($scope.patienten);
 
 		oibTafelAppFactory.list(function(oibTafelAppFactory) {
-			$scope.patienten = oibTafelAppFactory.list;
+			$scope.patienten = oibTafelAppFactory;
 		});
+		
+		
+		oibTafelAppFactoryBetten.list(function(oibTafelAppFactoryBetten) {
+			$scope.zimmer = oibTafelAppFactoryBetten.zimmer;
+		});
+		 
 		
   });
