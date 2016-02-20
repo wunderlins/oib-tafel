@@ -1,0 +1,611 @@
+[
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "OBN",
+		"NACHNAME": "Obialo",
+		"PA_CODE": 1,
+		"VORNAME": "Nicole"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "WEA",
+		"NACHNAME": "Wenger",
+		"PA_CODE": 2,
+		"VORNAME": "Astrid"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "LUB",
+		"NACHNAME": "Lustenberger",
+		"PA_CODE": 2,
+		"VORNAME": "Beatrice"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "FUR",
+		"NACHNAME": "Furler",
+		"PA_CODE": 2,
+		"VORNAME": "Claudia"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "ZUF",
+		"NACHNAME": "Zufle",
+		"PA_CODE": 2,
+		"VORNAME": "Else"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "WEI",
+		"NACHNAME": "Weinmann",
+		"PA_CODE": 2,
+		"VORNAME": "Flavia"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "KKA",
+		"NACHNAME": "Kaufmann",
+		"PA_CODE": 2,
+		"VORNAME": "Kari Anne"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "STU",
+		"NACHNAME": "Stula",
+		"PA_CODE": 2,
+		"VORNAME": "Katja"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "MAZ",
+		"NACHNAME": "Zimmermann",
+		"PA_CODE": 2,
+		"VORNAME": "Maithe"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "JES",
+		"NACHNAME": "De Jesus Seyfferth",
+		"PA_CODE": 2,
+		"VORNAME": "Marieta"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "KEN",
+		"NACHNAME": "Kessler",
+		"PA_CODE": 2,
+		"VORNAME": "Nicole"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "TER",
+		"NACHNAME": "Teubler",
+		"PA_CODE": 2,
+		"VORNAME": "Ralf"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "LAN",
+		"NACHNAME": "Langer ",
+		"PA_CODE": 2,
+		"VORNAME": "Sabine"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "ZUG",
+		"NACHNAME": "Zuger",
+		"PA_CODE": 2,
+		"VORNAME": "Sandra"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "TAT",
+		"NACHNAME": "Tatti",
+		"PA_CODE": 2,
+		"VORNAME": "Serenella"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "ZUM",
+		"NACHNAME": "Zumkeller",
+		"PA_CODE": 2,
+		"VORNAME": "Sonja"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "EBE",
+		"NACHNAME": "Ebert",
+		"PA_CODE": 2,
+		"VORNAME": "Susanne"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "RUT",
+		"NACHNAME": "Rutishauser",
+		"PA_CODE": 2,
+		"VORNAME": "Theres"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "SOL",
+		"NACHNAME": "Scholz",
+		"PA_CODE": 2,
+		"VORNAME": "Ursula"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "MOJ",
+		"NACHNAME": "Mojsic",
+		"PA_CODE": 2,
+		"VORNAME": "Zorica"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "MOA",
+		"NACHNAME": "Monnier",
+		"PA_CODE": 10,
+		"VORNAME": "Anita"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "PAG",
+		"NACHNAME": "Pagel",
+		"PA_CODE": 10,
+		"VORNAME": "Antje"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "HAH",
+		"NACHNAME": "Hahn",
+		"PA_CODE": 10,
+		"VORNAME": "Georg"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "KAD",
+		"NACHNAME": "Kaden",
+		"PA_CODE": 10,
+		"VORNAME": "Grit"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "PEY",
+		"NACHNAME": "Peyer",
+		"PA_CODE": 10,
+		"VORNAME": "Magdalena"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "KRS",
+		"NACHNAME": "Kreis Fieth",
+		"PA_CODE": 10,
+		"VORNAME": "Mireille"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "KOM",
+		"NACHNAME": "Kolarevic",
+		"PA_CODE": 10,
+		"VORNAME": "Miroslava"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "LAU",
+		"NACHNAME": "Laue",
+		"PA_CODE": 10,
+		"VORNAME": "Susann"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "NAM",
+		"NACHNAME": "Naf",
+		"PA_CODE": 20,
+		"VORNAME": "Markus"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "SRK",
+		"NACHNAME": "Sauthier",
+		"PA_CODE": 70,
+		"VORNAME": "Kathrin"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "GUG",
+		"NACHNAME": "Gugel",
+		"PA_CODE": 97,
+		"VORNAME": "Regina"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "LIE",
+		"NACHNAME": "Burglen",
+		"PA_CODE": 118,
+		"VORNAME": "Sandrine"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "BLU",
+		"NACHNAME": "Martinez",
+		"PA_CODE": 119,
+		"VORNAME": "Marisol"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "MFU",
+		"NACHNAME": "Furrer",
+		"PA_CODE": 119,
+		"VORNAME": "Michael"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "SOD",
+		"NACHNAME": "Soltzer",
+		"PA_CODE": 149,
+		"VORNAME": "Dagmar"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "RIC",
+		"NACHNAME": "Richter",
+		"PA_CODE": 154,
+		"VORNAME": "Hans"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "RYL",
+		"NACHNAME": "Ryll",
+		"PA_CODE": 154,
+		"VORNAME": "Kay"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "HAA",
+		"NACHNAME": "Hartmann",
+		"PA_CODE": 157,
+		"VORNAME": "Andre"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "RAC",
+		"NACHNAME": "Ratzer",
+		"PA_CODE": 157,
+		"VORNAME": "Christof"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "KIM",
+		"NACHNAME": "Kim",
+		"PA_CODE": 157,
+		"VORNAME": "Daniel"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "SPJ",
+		"NACHNAME": "Sprachta",
+		"PA_CODE": 157,
+		"VORNAME": "Jan"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "STJ",
+		"NACHNAME": "Stuwe",
+		"PA_CODE": 157,
+		"VORNAME": "Jens"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "STT",
+		"NACHNAME": "Sutter",
+		"PA_CODE": 157,
+		"VORNAME": "Pascal"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "MOS",
+		"NACHNAME": "Mogg",
+		"PA_CODE": 157,
+		"VORNAME": "Stefanie"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "SES",
+		"NACHNAME": "Seiler",
+		"PA_CODE": 157,
+		"VORNAME": "Stephanie"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "RIT",
+		"NACHNAME": "Riegl",
+		"PA_CODE": 157,
+		"VORNAME": "Thomas"
+	},
+	{
+		"KNOTEN_ID": 16805,
+		"KUERZEL": "WIT",
+		"NACHNAME": "Wittek",
+		"PA_CODE": 160,
+		"VORNAME": "Christl"
+	},
+	{
+		"KNOTEN_ID": 16805,
+		"KUERZEL": "JMW",
+		"NACHNAME": "Wehrli",
+		"PA_CODE": 160,
+		"VORNAME": "Michael"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "DVM",
+		"NACHNAME": "De Vincenzo",
+		"PA_CODE": 161,
+		"VORNAME": "Michele"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "CNA",
+		"NACHNAME": "Cuffari",
+		"PA_CODE": 161,
+		"VORNAME": "Natascha"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "REI",
+		"NACHNAME": "Reichlin",
+		"PA_CODE": 171,
+		"VORNAME": "Luitgard"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "KLS",
+		"NACHNAME": "Klimke",
+		"PA_CODE": 171,
+		"VORNAME": "Steffi"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "CHM",
+		"NACHNAME": "Christ",
+		"PA_CODE": 177,
+		"VORNAME": "Michael"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "GRU",
+		"NACHNAME": "Gruner",
+		"PA_CODE": 202,
+		"VORNAME": "Antje"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "WOR",
+		"NACHNAME": "Mehlin",
+		"PA_CODE": 202,
+		"VORNAME": "Beatrice"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "GOF",
+		"NACHNAME": "Gonnert",
+		"PA_CODE": 202,
+		"VORNAME": "Friederike"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "FOF",
+		"NACHNAME": "Foell",
+		"PA_CODE": 202,
+		"VORNAME": "Frederique"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "HEL",
+		"NACHNAME": "Hell",
+		"PA_CODE": 202,
+		"VORNAME": "Marc"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "VOK",
+		"NACHNAME": "Voekt",
+		"PA_CODE": 202,
+		"VORNAME": "Pia"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "WEB",
+		"NACHNAME": "Weber",
+		"PA_CODE": 202,
+		"VORNAME": "Rosemarie"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "MAS",
+		"NACHNAME": "Masina",
+		"PA_CODE": 225,
+		"VORNAME": "Giulio"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "ZEH",
+		"NACHNAME": "Zehnder",
+		"PA_CODE": 233,
+		"VORNAME": "Angelika"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "HAM",
+		"NACHNAME": "Hammer",
+		"PA_CODE": 233,
+		"VORNAME": "Bernd"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "KOD",
+		"NACHNAME": "Koch",
+		"PA_CODE": 233,
+		"VORNAME": "Doreen"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "FIF",
+		"NACHNAME": "Finkbeiner",
+		"PA_CODE": 233,
+		"VORNAME": "Frank"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "KNH",
+		"NACHNAME": "Knauber",
+		"PA_CODE": 233,
+		"VORNAME": "Harry"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "BAM",
+		"NACHNAME": "Bamberg",
+		"PA_CODE": 233,
+		"VORNAME": "Herta"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "KUN",
+		"NACHNAME": "Kunz",
+		"PA_CODE": 233,
+		"VORNAME": "Pia Magdalena"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "KOR",
+		"NACHNAME": "Kost",
+		"PA_CODE": 233,
+		"VORNAME": "Ruth"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "ULU",
+		"NACHNAME": "Ulu",
+		"PA_CODE": 233,
+		"VORNAME": "Saime"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "WET",
+		"NACHNAME": "Werner",
+		"PA_CODE": 233,
+		"VORNAME": "Torsten"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "SPY",
+		"NACHNAME": "Spychiger",
+		"PA_CODE": 709,
+		"VORNAME": "Claudia"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "WEC",
+		"NACHNAME": "Wesch",
+		"PA_CODE": 709,
+		"VORNAME": "Conrad"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "DOB",
+		"NACHNAME": "Dobernig",
+		"PA_CODE": 709,
+		"VORNAME": "Dunja"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "GIG",
+		"NACHNAME": "Gisler",
+		"PA_CODE": 709,
+		"VORNAME": "Gabriela"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "FRO",
+		"NACHNAME": "Frolich",
+		"PA_CODE": 709,
+		"VORNAME": "Ingrid/PFF"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "WKK",
+		"NACHNAME": "Wagner",
+		"PA_CODE": 709,
+		"VORNAME": "Karl-Klaus"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "SUK",
+		"NACHNAME": "Sunder",
+		"PA_CODE": 709,
+		"VORNAME": "Katrin"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "HEM",
+		"NACHNAME": "Hentschel",
+		"PA_CODE": 709,
+		"VORNAME": "Manuela"
+	},
+	{
+		"KNOTEN_ID": 14413,
+		"KUERZEL": "RIE",
+		"NACHNAME": "Ries",
+		"PA_CODE": 709,
+		"VORNAME": "Margrit"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "GOH",
+		"NACHNAME": "Gohrig",
+		"PA_CODE": 709,
+		"VORNAME": "Mario"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "SUL",
+		"NACHNAME": "Schuller",
+		"PA_CODE": 709,
+		"VORNAME": "Patrick"
+	},
+	{
+		"KNOTEN_ID": 14415,
+		"KUERZEL": "WER",
+		"NACHNAME": "Weichelt",
+		"PA_CODE": 709,
+		"VORNAME": "Roswitha"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "THS",
+		"NACHNAME": "Thillainathan",
+		"PA_CODE": 709,
+		"VORNAME": "Subajini"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "HUB",
+		"NACHNAME": "Hubsch",
+		"PA_CODE": 709,
+		"VORNAME": "Udo"
+	},
+	{
+		"KNOTEN_ID": 14412,
+		"KUERZEL": "STW",
+		"NACHNAME": "Stehlin",
+		"PA_CODE": 709,
+		"VORNAME": "Winfried"
+	},
+	{
+		"KNOTEN_ID": 14411,
+		"KUERZEL": "BAW",
+		"NACHNAME": "Barth",
+		"PA_CODE": 709,
+		"VORNAME": "Wolfgang"
+	}
+]
