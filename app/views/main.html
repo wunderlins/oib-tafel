@@ -6,8 +6,8 @@
 	
 	<div ng-show="loaded.all">
 	
-		<div ng-repeat="row in data" id="Z{{row.zimmer}}">
-			<span style="display: none">Zimmer {{row.zimmer}}</span>
+		<div ng-repeat="zim in zimmer" id="Z{{zim.nr}}">
+			<span style="display: none">Zimmer {{zim.nr}}</span>
 			<div class="list-group">
 			<div ng-repeat="bett in zim.betten" id="Z{{zim.nr}}B{{bett}}" class="list-group-item list-group-item-info bett">
 				<span class="zimmernummer">{{zim.nr}}B{{bett}}

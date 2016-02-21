@@ -12,7 +12,7 @@ angular.module('oibTafelApp')
 */
 
 angular.module('oibTafelApp')
-	.factory("oibTafelAppFactoryBetten", ['$http', function($http) {
+	.factory("oibTafelAppFactoryZimmer", ['$http', function($http) {
 	return {
 		list: function(callback){
 			$http.get('data/betten.json').success(callback);
@@ -58,7 +58,7 @@ function Zimmer(nr) {
  */
 angular.module('oibTafelApp')
   .controller('MainCtrl', function ($scope, $timeout,
-                                            oibTafelAppFactoryBetten,
+                                            oibTafelAppFactoryZimmer,
                                             oibTafelAppFactoryPatienten) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
@@ -74,14 +74,7 @@ angular.module('oibTafelApp')
     //console.log($scope.patienten);
 		
 		// hold all rooms with all patients
-		$scope.data = [];
-		
-		// holds final data structure for the template
-		$scope.betten_data = [];
-		
-		// a list of beds in the form of <room#>B<bed#>
-		$scope.betten = [];
-		$scope.zimmer = [];
+		$scope.data = {};
 		
 		// keep track of asynchronous calls
 		$scope.loaded = {
@@ -89,23 +82,35 @@ angular.module('oibTafelApp')
 			zimmer: false			
 		};
 		
+		// async data
+		$scope.zimmer = [];
+		$scope.patienten = [];
+		
 		// fetch data
-		oibTafelAppFactoryBetten.list(function(oibTafelAppFactoryBetten) {
-			$scope.zimmerData = oibTafelAppFactoryBetten.zimmer;
+		oibTafelAppFactoryZimmer.list(function(oibTafelAppFactoryZimmer) {
+			$scope.zimmer = oibTafelAppFactoryZimmer.zimmer;
 			$scope.loaded.zimmer = true;
 			
-			for (var z in $scope.zimmerData) {
-				for (var b in $scope.zimmerData[z].betten) {
-					if ($scope.zimmer.indexOf($scope.data[$scope.zimmerData[z].nr]) !== -1) {
-						$scope.zimmer.push($scope.data[$scope.zimmerData[z].nr]);
-					}
-					$scope.betten.push($scope.zimmerData[z].nr+"B"+$scope.zimmerData[z].betten[b]);
-					var bett = new Bett($scope.zimmerData[z].nr, $scope.zimmerData[z].betten[b]);
-					//$scope.zimmer.betten[b] = bett;
-					//$scope.data.push(bett);
+			var last_zimmer_nr = null;
+			for (var z in $scope.zimmer) {
+				var zimmer = $scope.zimmer[z];
+				
+				if (zimmer.nr !== last_zimmer_nr) {
+					last_zimmer_nr = zimmer.nr;
+					var new_zimmmer = new Zimmer(zimmer.nr);
+					$scope.data[zimmer.nr] = new_zimmmer;
 				}
+				
+				for (var b in zimmer.betten) {
+					var bett = new Bett(zimmer.nr, zimmer.betten[b]);
+					//zimmer.betten[b];
+					$scope.data[zimmer.nr].betten[zimmer.betten[b]] = bett;
+					//console.log(bett);
+				}
+				
 			}
-			console.log($scope.zimmer);
+			//console.log($scope.data);
+			
 		});
 		 
 		oibTafelAppFactoryPatienten.list(function(oibTafelAppFactoryPatienten) {
@@ -119,6 +124,7 @@ angular.module('oibTafelApp')
 			if ($scope.loaded.patienten && $scope.loaded.zimmer) {
 				//console.log($scope.loaded.patienten);
 				
+				/*
 				for (var e in $scope.patienten) {
 					var bett = $scope.patienten[e].PD_Bett;
 					var ix = $scope.betten_data.indexOf(bett, 0);
@@ -128,7 +134,34 @@ angular.module('oibTafelApp')
 					}
 				}
 				//console.log($scope.data);
+				*/
+				
+				for (var e in $scope.patienten) {
+					if (!$scope.patienten[e]) {
+						continue;
+					}
+					var zimmerbett = $scope.patienten[e].PD_Bett;
+					if (!zimmerbett) {
+						continue;
+					}
+					var zb_arr = zimmerbett.split("B");
+					//console.log(zb_arr);
+					//console.log(zb_arr.length);
+					if (zb_arr.length !== 2) {
+						continue;
+					}
+					try {
+						$scope.data[zb_arr[0]].betten[zb_arr[1]].patient = $scope.patienten[e];
+					} catch (e) {
+						//console.log(zb_arr);
+						;
+					}
+					//console.log(zb_arr);
+					
+				}				
+				
 				$scope.loaded.all = 1;
+				console.log($scope.data);
 				return true;
 			}
 		}, 100, this); 
