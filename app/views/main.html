@@ -1,18 +1,30 @@
-<div ng-controller="MainCtrl">
+<div data-ng-controller="MainCtrl">
 
 	<!--p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p-->
 	
 	<!--{{zimmer}}-->
 	
-	<div ng-show="loaded.all">
-	
-		<div ng-repeat="zim in zimmer" id="Z{{zim.nr}}">
+	<div data-ng-show="loaded.all">
+
+		<div data-ng-repeat="z in data" id="Z{{zim.nr}}" class="list-group">
+			<span style="display: none;" id="Z{{z.nr}}nr">{{z.nr}}</span>
+			
+			<div data-ng-repeat="b in z.betten" 
+			     data-ng-if="b"
+			     id="B{{value.id}}" class="list-group-item list-group-item-info bett">
+				<span class="zimmernummer">{{z.nr}}B{{b.bett}}</span>
+			</div>
+			<!--div class="vertical-spacer"></div-->
+
+		</div>
+
+		<!--div ng-repeat="zim in zimmer" id="Z{{zim.nr}}">
 			<span style="display: none">Zimmer {{zim.nr}}</span>
 			<div class="list-group">
 			<div ng-repeat="bett in zim.betten" id="Z{{zim.nr}}B{{bett}}" class="list-group-item list-group-item-info bett">
 				<span class="zimmernummer">{{zim.nr}}B{{bett}}
 			</div>
-		</div>
+		</div-->
 		
 	</div><!-- end show -->
 	
