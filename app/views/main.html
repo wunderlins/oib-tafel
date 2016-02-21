@@ -5,34 +5,35 @@
 	<!--{{zimmer}}-->
 	
 	<div data-ng-show="loaded.all">
-
-		<div data-ng-repeat="z in data" id="Z{{zim.nr}}" class="list-group">
-			<!--span style="display: none;" id="Z{{z.nr}}nr">{{z.nr}}</span-->
+		<div style="width: 210pt; float:left;">
+			<div data-ng-repeat="z in data" id="Z{{zim.nr}}" class="list-group">
+				<!--span style="display: none;" id="Z{{z.nr}}nr">{{z.nr}}</span-->
 			
-			<div data-ng-repeat="b in z.betten" 
-			     data-ng-if="b"
-			     id="B{{value.id}}" class="list-group-item list-group-item-{{b.class}} bett">
+				<div data-ng-repeat="b in z.betten" 
+					   data-ng-if="b"
+					   id="B{{value.id}}" class="list-group-item list-group-item-{{b.class}} bett">
 
 
-				<div class="btn-group" role="group" data-ng-if="b.patient.PD_Sex">
-					<button type="button" class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</button>
-					<button type="button" class="btn btn-info mysex">{{b.patient.PD_Sex}}</button>
-					<button type="button" class="btn btn-success age">{{b.age}}</button>
-				</div>
+					<div class="btn-group" role="group" data-ng-if="b.patient.PD_Sex">
+						<div type="button" class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</div>
+						<button type="button" class="btn btn-info mysex">{{b.patient.PD_Sex}}</button>
+						<button type="button" class="btn btn-success age">{{b.age}}</button>
+					</div>
 
-				<div class="btn-group" role="group" data-ng-if="!b.patient.PD_Sex">
-					<button type="button" class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</button>
-				</div>
+					<div class="btn-group" role="group" data-ng-if="!b.patient.PD_Sex">
+						<button type="button" class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</button>
+					</div>
 				
-				<!--span class="zimmernummer label label-success">{{z.nr}}B{{b.bett}}</span-->
+					<!--span class="zimmernummer label label-success">{{z.nr}}B{{b.bett}}</span-->
 				
-				<span data-ng-if="b.patient.PD_Name">
-					<!--span class="badge badge-success age">{{b.patient.PD_Sex}} {{b.age}}</span-->
-					{{b.patient.PD_Name}} {{b.patient.PD_Vorname}}
-				</span>
+					<span data-ng-if="b.patient.PD_Name">
+						<!--span class="badge badge-success age">{{b.patient.PD_Sex}} {{b.age}}</span-->
+						{{b.patient.PD_Name}} {{b.patient.PD_Vorname}}
+					</span>
+				</div>
+				<!--div class="vertical-spacer"></div-->
+			
 			</div>
-			<!--div class="vertical-spacer"></div-->
-
 		</div>
 
 		<!--div ng-repeat="zim in zimmer" id="Z{{zim.nr}}">
