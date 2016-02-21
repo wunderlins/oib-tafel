@@ -40,6 +40,8 @@ function Bett(zimmer, bett) {
 	this.bett    = bett;
 	this.patient = null;
 	this.nurse   = null;
+	this.class   = "item disabled";
+	this.age     = null;
 	return this;
 }
 
@@ -48,6 +50,22 @@ function Zimmer(nr) {
 	this.betten = [];
 }
 
+// http://stackoverflow.com/questions/10008050/get-age-from-birthdate
+function calculate_age(birth_month,birth_day,birth_year) {
+	var today_date = new Date();
+	var today_year = today_date.getFullYear();
+	var today_month = today_date.getMonth();
+	var today_day = today_date.getDate();
+	var age = today_year - birth_year;
+
+	if ( today_month < (birth_month - 1)) {
+		age--;
+	}
+	if (((birth_month - 1) == today_month) && (today_day < birth_day)) {
+		age--;
+	}
+	return age;
+}
 
 /**
  * @ngdoc function
@@ -152,16 +170,24 @@ angular.module('oibTafelApp')
 					}
 					try {
 						$scope.data[zb_arr[0]].betten[zb_arr[1]].patient = $scope.patienten[e];
+						$scope.data[zb_arr[0]].betten[zb_arr[1]].class = "info";
+						// calculate age
+						var d = $scope.patienten[e].PD_GebDat;
+						var birthday = new Date(d.substr(0, 4), parseInt(d.substr(4, 2))-1, d.substr(6, 2));
+						var age = calculate_age(birthday.getMonth(), birthday.getDate(), birthday.getYear())-1900;
+						$scope.data[zb_arr[0]].betten[zb_arr[1]].age = age;
+						//console.log($scope.patienten[e].PD_GebDat + " " + birthday + " " + age);
+						
 					} catch (e) {
 						//console.log(zb_arr);
-						;
+						continue;
 					}
 					//console.log(zb_arr);
 					
 				}				
 				
 				$scope.loaded.all = 1;
-				console.log($scope.data);
+				//console.log($scope.data);
 				return true;
 			}
 		}, 100, this); 
