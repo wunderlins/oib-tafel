@@ -1,4 +1,4 @@
-[
+{ "patienten": [
 	{
 		"MutMeld": null,
 		"PD_AusDat": "",
@@ -16280,3 +16280,4 @@
 		"DIP_HLM": ""
 	}
 ]
+}
