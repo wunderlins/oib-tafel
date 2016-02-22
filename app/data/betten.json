@@ -1,12 +1,12 @@
 {"zimmer": [
-{"nr": 1, "betten": [1,2,3,4]},
-{"nr": 2, "betten": [1,2]},
-{"nr": 3, "betten": [1,2,3,4]},
-{"nr": 4, "betten": [1]},
-{"nr": 5, "betten": [1]},
-{"nr": 6, "betten": [1,2]},
-{"nr": 7, "betten": [1,2]},
-{"nr": 8, "betten": [1,2]},
-{"nr": 9, "betten": [1,2]},
-{"nr": 10, "betten": [1,2]} 
+{"nr": 1, "trackt": "Neubau", "betten": [1,2,3,4]},
+{"nr": 2, "trackt": "Neubau", "betten": [1,2]},
+{"nr": 3, "trackt": "Neubau", "betten": [1,2,3,4]},
+{"nr": 4, "trackt": "K1", "betten": [1]},
+{"nr": 5, "trackt": "K1", "betten": [1]},
+{"nr": 6, "trackt": "K1", "betten": [1,2]},
+{"nr": 7, "trackt": "K1", "betten": [1,2]},
+{"nr": 8, "trackt": "K1", "betten": [1,2]},
+{"nr": 9, "trackt": "K1", "betten": [1,2]},
+{"nr": 10, "trackt": "K1", "betten": [1,2]} 
 ]}

@@ -45,8 +45,9 @@ function Bett(zimmer, bett) {
 	return this;
 }
 
-function Zimmer(nr) {
+function Zimmer(nr, trackt) {
 	this.nr = nr;
+	this.trackt = trackt;
 	this.betten = [];
 }
 
@@ -115,7 +116,7 @@ angular.module('oibTafelApp')
 				
 				if (zimmer.nr !== last_zimmer_nr) {
 					last_zimmer_nr = zimmer.nr;
-					var new_zimmmer = new Zimmer(zimmer.nr);
+					var new_zimmmer = new Zimmer(zimmer.nr, zimmer.trackt);
 					$scope.data[zimmer.nr] = new_zimmmer;
 				}
 				
@@ -187,7 +188,7 @@ angular.module('oibTafelApp')
 				}				
 				
 				$scope.loaded.all = 1;
-				//console.log($scope.data);
+				console.log($scope.data);
 				return true;
 			}
 		}, 100, this); 
