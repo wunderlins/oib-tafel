@@ -14,21 +14,27 @@
 			
 				<div data-ng-repeat="b in z.betten" 
 					   data-ng-if="b"
+					   onclick="console.log('ouch')"
 					   id="B{{value.id}}" class="list-group-item list-group-item-{{b.class}} bett">
 
 					<div class="btn-group" role="group" data-ng-if="b.patient.PD_Sex">
-						<button type="button" class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</button>
-						<button type="button" class="btn btn-info mysex">{{b.patient.PD_Sex}}</button>
-						<button type="button" class="btn btn-success age">{{b.age}}</button>
+						<div class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</div>
+						<div class="btn btn-info mysex">{{b.patient.PD_Sex}}</div>
+						<div class="btn btn-success age">{{b.age}}</div>
 					</div>
 
 					<div class="btn-group" role="group" data-ng-if="!b.patient.PD_Sex">
-						<button type="button" class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</button>
+						<div class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</div>
 					</div>
 					
 					<span data-ng-if="b.patient.PD_Name">
 						{{b.patient.PD_Name}} {{b.patient.PD_Vorname}}
 					</span>
+
+					<span data-ng-if="b.patient.PD_Name" class="pull-right" style="padding-top: 0.4em;">
+						nurse nurse
+					</span>
+					
 				</div>
 			</div><!-- end zimmer loop-->
 			
@@ -45,24 +51,28 @@
 					   id="B{{value.id}}" class="list-group-item list-group-item-{{b.class}} bett">
 
 					<div class="btn-group" role="group" data-ng-if="b.patient.PD_Sex">
-						<button type="button" class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</button>
-						<button type="button" class="btn btn-info mysex">{{b.patient.PD_Sex}}</button>
-						<button type="button" class="btn btn-success age">{{b.age}}</button>
+						<div class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</div>
+						<div class="btn btn-info mysex">{{b.patient.PD_Sex}}</div>
+						<div class="btn btn-success age">{{b.age}}</div>
 					</div>
 
 					<div class="btn-group" role="group" data-ng-if="!b.patient.PD_Sex">
-						<button type="button" class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</button>
+						<div class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</div>
 					</div>
 					
 					<span data-ng-if="b.patient.PD_Name">
 						{{b.patient.PD_Name}} {{b.patient.PD_Vorname}}
 					</span>
+
+					<span data-ng-if="b.patient.PD_Name" class="pull-right" style="padding-top: 0.4em;">
+						nurse nurse
+					</span>
+					
 				</div>
 			</div><!-- end zimmer loop-->
 			
-			</div>
-			<div class="col-xlg-4 col-sm-6">COL 3</div>
-		</div><!-- end row container -->
+		</div>
+		<div class="col-xlg-4 col-sm-6">COL 3</div>
 	
 	</div><!-- end show -->
 	
