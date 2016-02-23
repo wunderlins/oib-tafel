@@ -17,21 +17,23 @@
 					   onclick="console.log('ouch')"
 					   id="B{{value.id}}" class="list-group-item list-group-item-{{b.class}} bett">
 
-					<div class="btn-group" role="group" data-ng-if="b.patient.PD_Sex">
+					<div class="btn-group buttongroup" 
+					     role="group" 
+					     data-ng-if="b.patient.PD_Sex">
 						<div class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</div>
 						<div class="btn btn-info mysex">{{b.patient.PD_Sex}}</div>
 						<div class="btn btn-success age">{{b.age}}</div>
 					</div>
 
-					<div class="btn-group" role="group" data-ng-if="!b.patient.PD_Sex">
+					<div class="btn-group buttongroup" role="group" data-ng-if="!b.patient.PD_Sex">
 						<div class="btn btn-default zimmernummer">{{z.nr}}B{{b.bett}}</div>
 					</div>
-					
+				
 					<span data-ng-if="b.patient.PD_Name">
 						{{b.patient.PD_Name}} {{b.patient.PD_Vorname}}
 					</span>
 
-					<span data-ng-if="b.patient.PD_Name" class="pull-right" style="padding-top: 0.4em;">
+					<span data-ng-if="b.patient.PD_Name">
 						nurse nurse
 					</span>
 					
